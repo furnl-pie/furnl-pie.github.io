@@ -136,6 +136,39 @@
       border-radius: 12px; margin-top: 14px;
     }
 
+    /* ── GALLERY ── */
+    #gallery { background: #fff; }
+    .gallery-trucks {
+      border-radius: 16px; overflow: hidden;
+      margin-bottom: 36px; position: relative;
+    }
+    .gallery-trucks img {
+      width: 100%; height: 320px; object-fit: cover; display: block;
+    }
+    .trucks-label {
+      position: absolute; bottom: 16px; left: 16px;
+      background: rgba(0,0,0,0.55); color: #fff;
+      font-size: 0.82rem; font-weight: 600; padding: 6px 14px;
+      border-radius: 20px; backdrop-filter: blur(4px);
+    }
+    /* Before/After: 3쌍, 한 쌍씩 행으로 나열 */
+    .ba-pairs { display: flex; flex-direction: column; gap: 16px; }
+    .ba-pair {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    }
+    .ba-item { position: relative; border-radius: 14px; overflow: hidden; }
+    .ba-item img { width: 100%; height: 240px; object-fit: cover; display: block; }
+    .ba-tag {
+      position: absolute; top: 10px; left: 10px;
+      font-size: 0.78rem; font-weight: 700; padding: 5px 12px; border-radius: 20px;
+    }
+    .ba-tag.before { background: #fee2e2; color: #dc2626; }
+    .ba-tag.after  { background: #dcfce7; color: #16a34a; }
+    @media (max-width: 600px) {
+      .ba-pair { grid-template-columns: 1fr; }
+      .ba-item img { height: 200px; }
+    }
+
     /* ── WHY US ── */
     #why { background: #f6f8ff; }
     .why-grid {
@@ -256,6 +289,7 @@
   </a>
   <nav>
     <a href="#services">서비스</a>
+    <a href="#gallery">현장사진</a>
     <a href="#why">왜 퍼니인가</a>
     <a href="#process">처리 절차</a>
     <a href="quote.html" class="nav-cta">견적 문의</a>
@@ -346,6 +380,55 @@
       <h3>특수청소 서비스</h3>
       <p>고독사·사망 현장, 유품정리, 심한 오염 공간 등 일반 업체가 꺼리는 특수 상황에 전문 장비와 인력으로 안전하게 처리하며, 사후 탈취·소독까지 책임집니다.</p>
       <span class="service-tag">전문 인력 투입</span>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-head center">
+    <div class="section-label">GALLERY</div>
+    <h2 class="section-title">현장 사진</h2>
+    <p class="section-sub">퍼니환경개발의 실제 작업 현장입니다.</p>
+  </div>
+
+  <!-- 차량 보유 현황 -->
+  <div class="gallery-trucks">
+    <img src="img_trucks.jpg" alt="퍼니환경개발 보유 차량">
+    <span class="trucks-label">🚛 직보유 차량 현황</span>
+  </div>
+
+  <!-- Before / After 3쌍 -->
+  <div class="ba-pairs">
+    <div class="ba-pair">
+      <div class="ba-item">
+        <img src="img_before1.jpg" alt="작업 전 1">
+        <span class="ba-tag before">Before</span>
+      </div>
+      <div class="ba-item">
+        <img src="img_after1.jpg" alt="작업 후 1">
+        <span class="ba-tag after">After</span>
+      </div>
+    </div>
+    <div class="ba-pair">
+      <div class="ba-item">
+        <img src="img_before2.jpg" alt="작업 전 2">
+        <span class="ba-tag before">Before</span>
+      </div>
+      <div class="ba-item">
+        <img src="img_after2.jpg" alt="작업 후 2">
+        <span class="ba-tag after">After</span>
+      </div>
+    </div>
+    <div class="ba-pair">
+      <div class="ba-item">
+        <img src="img_before3.jpg" alt="작업 전 3">
+        <span class="ba-tag before">Before</span>
+      </div>
+      <div class="ba-item">
+        <img src="img_after3.jpg" alt="작업 후 3">
+        <span class="ba-tag after">After</span>
+      </div>
     </div>
   </div>
 </section>
