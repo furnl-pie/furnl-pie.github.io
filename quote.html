@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>견적 문의 | (주)퍼니환경개발</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: #f6f8ff; color: #1a1a2e; display: flex; flex-direction: column; }
+
+    /* ── HEADER ── */
+    header {
+      background: #fff;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 70px; flex-shrink: 0;
+    }
+    .logo { display: flex; align-items: center; text-decoration: none; }
+    .logo-svg { height: 44px; width: auto; }
+    .back-btn {
+      display: flex; align-items: center; gap: 6px;
+      color: #5a6a7a; text-decoration: none; font-size: 0.9rem; font-weight: 500;
+      padding: 8px 16px; border: 1px solid #dde5f5; border-radius: 8px;
+      transition: all .2s;
+    }
+    .back-btn:hover { background: #e8efff; color: #1a5dc8; border-color: #1a5dc8; }
+    .back-btn svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* ── INFO BAR ── */
+    .info-bar {
+      background: #fff; border-bottom: 1px solid #dde5f5;
+      padding: 18px 5%; display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 12px;
+      flex-shrink: 0;
+    }
+    .info-bar-left h1 { font-size: 1.15rem; font-weight: 800; margin-bottom: 3px; }
+    .info-bar-left p { font-size: 0.82rem; color: #6a7a8a; }
+    .info-bar-right {
+      display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+    }
+    .info-chip {
+      display: flex; align-items: center; gap: 6px;
+      background: #f6f8ff; border: 1px solid #dde5f5;
+      border-radius: 8px; padding: 8px 14px;
+      font-size: 0.84rem; font-weight: 600; color: #3a4a5a;
+      text-decoration: none;
+    }
+    .info-chip:hover { border-color: #1a5dc8; color: #1a5dc8; }
+    .info-chip .chip-icon { font-size: 1rem; }
+
+    /* ── IFRAME WRAP ── */
+    .iframe-wrap {
+      flex: 1; display: flex; flex-direction: column;
+      padding: 24px 5% 32px;
+      min-height: 0;
+    }
+    .iframe-inner {
+      flex: 1; background: #fff;
+      border-radius: 16px; overflow: hidden;
+      box-shadow: 0 4px 24px rgba(26,93,200,0.08);
+      border: 1px solid #dde5f5;
+      min-height: 680px;
+    }
+    .iframe-inner iframe {
+      width: 100%; height: 100%; min-height: 680px;
+      border: none; display: block;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #070c1a; color: rgba(255,255,255,0.5);
+      padding: 22px 5%; text-align: center;
+      font-size: 0.82rem; line-height: 1.9; flex-shrink: 0;
+    }
+    footer strong { color: rgba(255,255,255,0.85); }
+    footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
+    footer a:hover { color: #7aadff; }
+
+    @media (max-width: 600px) {
+      .iframe-wrap { padding: 16px 3% 24px; }
+      .info-bar { padding: 14px 4%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="furni_env.html" class="logo">
+    <svg class="logo-svg" viewBox="0 0 260 50" xmlns="http://www.w3.org/2000/svg">
+      <text x="2" y="40" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="42" fill="#1a5dc8" letter-spacing="-1">FN</text>
+      <text x="72" y="40" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif" font-weight="700" font-size="26" fill="#1a1a2e" letter-spacing="1">퍼니환경</text>
+      <rect x="2" y="45" width="62" height="3" rx="1.5" fill="#1a5dc8"/>
+    </svg>
+  </a>
+  <a href="furni_env.html" class="back-btn">
+    <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+    홈으로
+  </a>
+</header>
+
+<div class="info-bar">
+  <div class="info-bar-left">
+    <h1>📋 무료 견적 문의</h1>
+    <p>양식을 작성해 주시면 담당자가 빠르게 연락드립니다.</p>
+  </div>
+  <div class="info-bar-right">
+    <a href="tel:01079065424" class="info-chip">
+      <span class="chip-icon">📞</span> 010-7906-5424
+    </a>
+    <a href="mailto:furni0123@naver.com" class="info-chip">
+      <span class="chip-icon">✉️</span> furni0123@naver.com
+    </a>
+  </div>
+</div>
+
+<div class="iframe-wrap">
+  <div class="iframe-inner">
+    <iframe
+      src="https://forms.gle/nf28UNr144sFdXnE9"
+      title="퍼니환경개발 견적 문의"
+      loading="lazy"
+      allowfullscreen>
+      폼을 불러오는 중입니다...
+    </iframe>
+  </div>
+</div>
+
+<footer>
+  <strong>(주)퍼니환경개발</strong> &nbsp;|&nbsp; 사업자등록번호 307-88-03454<br>
+  인천광역시 서구 봉수대로1545번길 15 &nbsp;|&nbsp;
+  <a href="tel:01079065424">010-7906-5424</a> &nbsp;|&nbsp;
+  <a href="mailto:furni0123@naver.com">furni0123@naver.com</a>
+</footer>
+
+<script>
+  // forms.gle 단축 URL을 iframe에 직접 삽입
+  // 구글 폼 임베드 URL로 변환
+  (function() {
+    var shortUrl = "https://forms.gle/nf28UNr144sFdXnE9";
+    var iframe = document.querySelector('iframe');
+
+    // 단축 URL 직접 사용 (리다이렉트 허용)
+    iframe.src = shortUrl;
+
+    // 혹시 로드 실패 시 새 탭 안내 표시
+    iframe.onerror = function() {
+      showFallback();
+    };
+
+    // 10초 후에도 높이가 너무 작으면 폴백 표시
+    setTimeout(function() {
+      if (iframe.offsetHeight < 200) showFallback();
+    }, 10000);
+
+    function showFallback() {
+      var wrap = document.querySelector('.iframe-inner');
+      wrap.innerHTML =
+        '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;min-height:400px;gap:20px;padding:40px;text-align:center;">' +
+        '<div style="font-size:2.5rem;">📋</div>' +
+        '<h2 style="font-size:1.3rem;font-weight:800;">견적 문의 작성하기</h2>' +
+        '<p style="color:#6a7a8a;line-height:1.7;max-width:400px;">아래 버튼을 눌러 구글 폼에서 견적을 문의해 주세요.<br>작성 후 담당자가 빠르게 연락드립니다.</p>' +
+        '<a href="' + shortUrl + '" target="_blank" style="background:#1a5dc8;color:#fff;padding:14px 36px;border-radius:10px;font-size:1rem;font-weight:700;text-decoration:none;">구글 폼 열기 →</a>' +
+        '<p style="font-size:0.82rem;color:#aab5c8;">또는 ☎ <a href="tel:01079065424" style="color:#1a5dc8;font-weight:600;">010-7906-5424</a> 로 전화주세요</p>' +
+        '</div>';
+    }
+  })();
+</script>
+
+</body>
+</html>
